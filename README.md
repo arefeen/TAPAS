@@ -18,7 +18,7 @@ USAGE
 OPTIONS
 
 	-ref <annotation_file_name>	An annotation file is given using this option. 
-					Human annotation file is given in Finding_APS directory.
+					e.g. Human annotation file is given in Finding_APS directory for reference.
 
 	-cov <coverage_file_name>	A read coverage file is provided using this option.
 					Samtools is used to have the read coverage.
@@ -28,7 +28,7 @@ OPTIONS
 	-o <output_file_name>		Output file name is given using this option.
 
 	-p <double>			A penalty value can be provided using this option.
-					If nothing is given, this value is determined from the coverage
-					of the 3' UTR frame.
+					If nothing is given, the value is determined from the 
+					read coverage of the 3' UTR frame.
 
 ## Differential APS analysis
