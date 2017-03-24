@@ -11,7 +11,8 @@ Accoring to the central dogma of molecular biology, a pre-mRNA is synthesized fr
 ## APS detection
 APS_detection of TAPAS detects novel APSs of genes.
 
-USAGE	
+USAGE
+
 	./APS_detection {OPTIONS}
 
 OPTIONS
