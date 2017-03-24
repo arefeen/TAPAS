@@ -6,9 +6,27 @@ Accoring to the central dogma of molecular biology, a pre-mRNA is synthesized fr
 1. gcc version 4.8.3 20140911
 2. samtools 1.3
 3. R 3.1.3
-4. matrixStats, locfit and stats package of R
+4. matrixStats, locfit and stats packages of R
 
 ## APS detection
+APS_detection of TAPAS detects novel APSs of genes.
 
+USAGE	./APS_detection {OPTIONS}
+
+OPTIONS
+
+	-ref <annotation_file_name>	An annotation file is given using this option. 
+					Human annotation file is given in Finding_APS directory.
+
+	-cov <coverage_file_name>	A read coverage file is provided using this option.
+					Samtools is used to have the read coverage.
+
+	-l <int>			Read length
+
+	-o <output_file_name>		Output file name is given using this option.
+
+	-p <double>			A penalty value can be provided using this option.
+					If nothing is given, this value is determined from the coverage
+					of the 3' UTR frame.
 
 ## Differential APS analysis
