@@ -38,7 +38,7 @@ EXAMPLE
 
 
 ### Ouput of APS detection
-The output file consists of six columns: gene name, chromosome name, strand of the gene, detected APSs, abundance of those APSs, read count of those APSs respectively.
+The output file consists of six columns: gene name, chromosome name, strand of the gene, detected APSs, abundance of those APSs, read count of those APSs respectively. <br />
 Note: The abundance of each detected APS = read count of the APS / length of the 3' UTR (that contains the APS)  
 
 	
