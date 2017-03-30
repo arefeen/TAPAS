@@ -37,9 +37,44 @@ EXAMPLE
 	./APS_detection -ref refFlat_sf.txt -cov coverage_read_50.txt -l 76 -o expression_with_cp_read_50.txt
 
 
-### Ouput of APS detection
+### Output of APS detection
 The output file consists of six columns: gene name, chromosome name, strand of the gene, detected APSs, abundance of those APSs, read count of those APSs respectively. <br />
 Note: The abundance of each detected APS = read count of the APS / length of the 3' UTR (that contains the APS)  
 
 	
 ## Differential APS analysis
+Diff_APS_Analysis of TAPAS does differential analyses between two biological samples.
+
+USAGE
+
+	./Diff_APS_Analysis {OPTIONS}
+
+OPTIONS
+
+	-C1 <cond1_f1,cond1_f2,cond1_f3,..>	Comma separated file names of condition 1 are given using this option. Each of these files
+						is the APS detection file, outputted by the first part of TAPAS (outputted by APS_detection).
+	
+	-C2 <cond2_f1,cond2_f2,cond2_f3,..>	Comma separated file names of condition 2 are given using this option. Each of these files 
+                                                is the APS detection file, outputted by the first part of TAPAS (outputted by APS_detection).
+
+	-a <annotation_file_name>		An annotation file is given using this option. This file is similar to the annotation file
+						of the APS detection analysis.
+
+	-cutoff	<int>				Cutoff value is given using this option. This parameter is explained in TAPAS manuscript.
+						Default value: 70
+
+	-type	<d/s>				Type of differential analysis. d -> differential APS analysis, s -> shortening/lengthening
+						event analysis.
+
+	-o <output_file_name>			Ouput file name is given using this option. 
+						Default: for differential APS analysis "diff_result_final.txt", 
+							for shortening/lengthening event analysis "decision_output.txt"
+
+EXAMPLE
+
+	./Diff_APS_Analysis -C1 cond1_r1.txt,cond1_r2.txt,cond1_r3.txt,cond1_r4.txt,cond1_r5.txt,cond1_r6.txt -C2 cond2_r1.txt,cond2_r2.txt,cond2_r3.txt,cond2_r4.txt,cond2_r5.txt,cond2_r6.txt -a refFlat_sf.txt -cutoff 70 -type s -o deci_output.txt
+					
+
+### Output of differential analysis
+For differential APS analysis, the output file contains eight columns: chromosome name, gene name, strand, APS, log2 fold change, p-value, adjusted p-value, decision. <br />
+For shortening/lengthening event analysis, the output file contains six columns: chromosome name, gene name, strand, shorter APS, longer APS, log2 fold change.	
