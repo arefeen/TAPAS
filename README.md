@@ -4,10 +4,10 @@ Accoring to the central dogma of molecular biology, a pre-mRNA is synthesized fr
 
 
 ### Requirements
-1. gcc version 4.8.3 20140911
+1. The tool runs on linux machine.
 2. samtools 1.3
 3. R 3.1.3
-4. matrixStats, locfit and stats packages of R
+4. matrixStats, locfit and stats packages of R.
 
 ## APS detection
 APS_detection of TAPAS detects novel APSs of genes.
@@ -77,4 +77,17 @@ EXAMPLE
 
 ### Output of differential analysis
 For differential APS analysis, the output file contains eight columns: chromosome name, gene name, strand, APS, log2 fold change, p-value, adjusted p-value, decision. <br />
-For shortening/lengthening event analysis, the output file contains six columns: chromosome name, gene name, strand, shorter APS, longer APS, log2 fold change.	
+For shortening/lengthening event analysis, the output file contains six columns: chromosome name, gene name, strand, shorter APS, longer APS, log2 fold change.
+
+
+##Helping command
+
+###How to calculate coverage using samtools
+
+Command to calculate coverage from bam file:
+
+	samtools sort accepted_hits.bam -o sorted_accepted_hits.bam
+	samtools index -b sorted_accepted_hits.bam
+	samtools view -b sorted_accepted_hits.bam > accepted_reads.bam
+
+	samtools depth accepted_reads.bam > read_coverage.txt
