@@ -80,9 +80,9 @@ For differential APS analysis, the output file contains eight columns: chromosom
 For shortening/lengthening event analysis, the output file contains six columns: chromosome name, gene name, strand, shorter APS, longer APS, log2 fold change.
 
 
-##Helping command
+## Helping command
 
-###How to calculate coverage using samtools
+### How to calculate coverage using samtools
 
 Command to calculate coverage from bam file:
 
