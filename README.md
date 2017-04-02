@@ -77,7 +77,9 @@ EXAMPLE
 
 ### Output of differential analysis
 For differential APS analysis, the output file contains eight columns: chromosome name, gene name, strand, APS, log2 fold change, p-value, adjusted p-value, decision. <br />
-For shortening/lengthening event analysis, the output file contains six columns: chromosome name, gene name, strand, shorter APS, longer APS, log2 fold change.
+For shortening/lengthening event analysis, the output file contains six columns: chromosome name, gene name, strand, shorter APS, longer APS, log2 fold change. It also produces
+differentially expressed APS file. This file contains eight columns: chromosome name, gene name, strand, APS, fold change, log2 fold change, p-value, adjusted p-value.
+P-value is always adjusted using BH method.
 
 
 ## Helping command
