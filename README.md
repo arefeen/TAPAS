@@ -7,7 +7,7 @@ Accoring to the central dogma of molecular biology, a pre-mRNA is synthesized fr
 1. The tool runs on linux machine.
 2. samtools 1.3 (http://samtools.sourceforge.net/)
 3. R 3.1.3 (https://cran.r-project.org/)
-4. matrixStats, locfit and stats packages of R.
+4. matrixStats, locfit and stats packages of R (please run package_install.R script). 
 
 ## APS detection
 APS_detection of TAPAS detects novel APSs of genes.
