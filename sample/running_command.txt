@@ -1,0 +1,1 @@
+time ./APS_detection -ref refFlat_sf.txt -cov coverage_read_chrY.txt -l 76 -o expression_with_cp_chrY.txt
