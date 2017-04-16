@@ -22,8 +22,8 @@ Accoring to the central dogma of molecular biology, a pre-mRNA is synthesized fr
 3. [R 3.1.3](https://cran.r-project.org/src/base/R-3/R-3.1.3.tar.gz). After downloading and extracting the R version, please
    run the following command to install:
 
-	./configure
-	make
+		./configure
+		make
 
    These are the original sites for [samtools](http://samtools.sourceforge.net/) and [R](https://cran.r-project.org/).
 4. matrixStats, locfit and stats packages of R (please run package_install.R script). 
