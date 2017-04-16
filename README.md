@@ -5,8 +5,27 @@ Accoring to the central dogma of molecular biology, a pre-mRNA is synthesized fr
 
 ### Requirements
 1. The tool runs on linux machine.
-2. samtools 1.3 (http://samtools.sourceforge.net/)
-3. R 3.1.3 (https://cran.r-project.org/)
+2. [samtools 1.3](https://sourceforge.net/projects/samtools/files/samtools/1.3/). In order to run samtools, htslib is needed.
+   Therefore, please download both htslib-1.3.tar.bz2 and samtools-1.3.tar.bz2. First extract and install hstlib and then 
+   samtools. Please run the following command to install hstlib:
+		
+		./configure
+		make
+		make install
+
+   Please run the following command to install samtools:
+	
+		./configure
+		make
+		make install
+ 
+3. [R 3.1.3](https://cran.r-project.org/src/base/R-3/R-3.1.3.tar.gz). After downloading and extracting the R version, please
+   run the following command to install:
+
+	./configure
+	make
+
+   These are the original sites for [samtools](http://samtools.sourceforge.net/) and [R](https://cran.r-project.org/).
 4. matrixStats, locfit and stats packages of R (please run package_install.R script). 
 
 ## APS detection
