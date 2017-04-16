@@ -6,8 +6,8 @@ Accoring to the central dogma of molecular biology, a pre-mRNA is synthesized fr
 ### Requirements
 1. The tool runs on linux machine.
 2. [samtools 1.3](https://sourceforge.net/projects/samtools/files/samtools/1.3/). In order to run samtools, htslib is needed.
-   Therefore, please download both htslib-1.3.tar.bz2 and samtools-1.3.tar.bz2. First extract and install hstlib and then 
-   samtools. Please run the following command to install hstlib:
+   Therefore, please download both htslib-1.3.tar.bz2 and samtools-1.3.tar.bz2. First extract and install htslib and then 
+   samtools. Please run the following command to install htslib:
 		
 		./configure
 		make
