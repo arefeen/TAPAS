@@ -1,6 +1,6 @@
 # TAPAS: Tool for Alternative Polyadenylation Site Analysis
 
-Accoring to the central dogma of molecular biology, a pre-mRNA is synthesized from the coding sequence of a gene during the transcriptional process. This pre-mRNA is coverted into a (mature) mRNA by the post-transcriptional process. The post-transcriptional process consists of three major steps. One of them is the addition of polyadenylation (polyA) tail using the polyadenylation pocess, which in turn consists of two steps: the cleavage at the 3' end of a pre-mRNA and the addition of a polyA tail at the cleavage site. But, due to the effect of certain *cis*-acting elements and *trans*-acting factors alternative cleavage sites can be formed from in a pre-mRNA. More precisely, a single pre-mRNA can often produce more than one mRNA with 3' untranslated regions (3' UTRs) of different lengths. TAPAS is a tool for detecting such alternative polyadenylation cleavage sites (APSs) within a gene from RNA-Seq data. If two biological samples with multiple replicates are given, TAPAS can indentify differentially expressed APSs between the samples. Moreover, its differential analysis has been extended to discover the shortening/lengthening of 3' UTRs within a gene.
+Accoring to the central dogma of molecular biology, a pre-mRNA is synthesized from the coding sequence of a gene during the transcriptional process. This pre-mRNA is coverted into a (mature) mRNA by the post-transcriptional process. The post-transcriptional process consists of three major steps. One of them is the addition of polyadenylation (polyA) tail using the polyadenylation pocess, which in turn consists of two steps: the cleavage at the 3' end of a pre-mRNA and the addition of a polyA tail at the cleavage site. But, due to the effect of certain *cis*-acting elements and *trans*-acting factors alternative cleavage sites can be formed from in a pre-mRNA. More precisely, a single pre-mRNA can often produce more than one mRNA with 3' untranslated regions (3' UTRs) of different lengths. TAPAS is a tool for detecting such alternative polyadenylation cleavage (APA) sites within a gene from RNA-Seq data. If two biological samples with multiple replicates are given, TAPAS can indentify differentially expressed APA sites between the samples. Moreover, its differential analysis has been extended to discover the shortening/lengthening of 3' UTRs within a gene.
 
 
 ### Requirements
@@ -28,8 +28,8 @@ Accoring to the central dogma of molecular biology, a pre-mRNA is synthesized fr
    These are the original sites for [samtools](http://samtools.sourceforge.net/) and [R](https://cran.r-project.org/).
 4. matrixStats, locfit and stats packages of R (please run package_install.R script). 
 
-## APS detection
-APS_detection of TAPAS detects novel APSs of genes.
+## APA site detection
+APS_detection of TAPAS detects novel APA sites of genes.
 
 USAGE
 
@@ -56,12 +56,12 @@ EXAMPLE
 	./APS_detection -ref refFlat_sf.txt -cov coverage_read_50.txt -l 76 -o expression_with_cp_read_50.txt
 
 
-### Output of APS detection
-The output file consists of six columns: gene name, chromosome name, strand of the gene, detected APSs, abundance of those APSs, read count of those APSs respectively. <br />
-Note: The abundance of each detected APS = read count of the APS / length of the 3' UTR (that contains the APS)  
+### Output of APA site detection
+The output file consists of six columns: gene name, chromosome name, strand of the gene, detected APA sites, abundance of those APA sites, read count of those APA sites respectively. <br />
+Note: The abundance of each detected APA site = read count of the APA site / length of the 3' UTR (that contains the APA site)  
 
 	
-## Differential APS analysis
+## Differential APA site analysis
 Diff_APS_Analysis of TAPAS does differential analyses between two biological samples.
 
 USAGE
@@ -71,22 +71,22 @@ USAGE
 OPTIONS
 
 	-C1 <cond1_f1,cond1_f2,cond1_f3,..>	Comma separated file names of condition 1 are given using this option. Each of these files
-						is the APS detection file, outputted by the first part of TAPAS (outputted by APS_detection).
+						is the APA site detection file, outputted by the first part of TAPAS (outputted by APS_detection).
 	
 	-C2 <cond2_f1,cond2_f2,cond2_f3,..>	Comma separated file names of condition 2 are given using this option. Each of these files 
-                                                is the APS detection file, outputted by the first part of TAPAS (outputted by APS_detection).
+                                                is the APA site detection file, outputted by the first part of TAPAS (outputted by APS_detection).
 
 	-a <annotation_file_name>		An annotation file is given using this option. This file is similar to the annotation file
-						of the APS detection analysis.
+						of the APA site detection analysis.
 
 	-cutoff	<int>				Cutoff value is given using this option. This parameter is explained in TAPAS manuscript.
 						Default value: 70
 
-	-type	<d/s>				Type of differential analysis. d -> differential APS analysis, s -> shortening/lengthening
+	-type	<d/s>				Type of differential analysis. d -> differential APA site analysis, s -> shortening/lengthening
 						event analysis.
 
 	-o <output_file_name>			Ouput file name is given using this option. 
-						Default: for differential APS analysis "diff_result_final.txt", 
+						Default: for differential APA site analysis "diff_result_final.txt", 
 							for shortening/lengthening event analysis "decision_output.txt"
 
 EXAMPLE
@@ -95,9 +95,9 @@ EXAMPLE
 					
 
 ### Output of differential analysis
-For differential APS analysis, the output file contains eight columns: chromosome name, gene name, strand, APS, log2 fold change, p-value, adjusted p-value, decision. <br />
-For shortening/lengthening event analysis, the output file contains six columns: chromosome name, gene name, strand, shorter APS, longer APS, log2 fold change. It also produces
-differentially expressed APS file. This file contains eight columns: chromosome name, gene name, strand, APS, fold change, log2 fold change, p-value, adjusted p-value.
+For differential APA site analysis, the output file contains eight columns: chromosome name, gene name, strand, APA site, log2 fold change, p-value, adjusted p-value, decision. <br />
+For shortening/lengthening event analysis, the output file contains six columns: chromosome name, gene name, strand, shorter APA site, longer APA site, log2 fold change. It also produces
+differentially expressed APA site file. This file contains eight columns: chromosome name, gene name, strand, APA site, fold change, log2 fold change, p-value, adjusted p-value.
 P-value is always adjusted using BH method.
 
 
