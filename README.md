@@ -29,11 +29,11 @@ Accoring to the central dogma of molecular biology, a pre-mRNA is synthesized fr
 4. matrixStats, locfit and stats packages of R (please run package_install.R script). 
 
 ## APA site detection
-APS_detection of TAPAS detects novel APA sites of genes.
+APA_sites_detection of TAPAS detects novel APA sites of genes.
 
 USAGE
 
-	./APS_detection {OPTIONS}
+	./APA_sites_detection {OPTIONS}
 
 OPTIONS
 
@@ -53,7 +53,7 @@ OPTIONS
 
 EXAMPLE
 
-	./APS_detection -ref refFlat_sf.txt -cov coverage_read_50.txt -l 76 -o expression_with_cp_read_50.txt
+	./APA_sites_detection -ref refFlat_sf.txt -cov coverage_read_50.txt -l 76 -o expression_with_cp_read_50.txt
 
 
 ### Output of APA site detection
@@ -71,10 +71,10 @@ USAGE
 OPTIONS
 
 	-C1 <cond1_f1,cond1_f2,cond1_f3,..>	Comma separated file names of condition 1 are given using this option. Each of these files
-						is the APA site detection file, outputted by the first part of TAPAS (outputted by APS_detection).
+						is the APA site detection file, outputted by the first part of TAPAS (outputted by APA_sites_detection).
 	
 	-C2 <cond2_f1,cond2_f2,cond2_f3,..>	Comma separated file names of condition 2 are given using this option. Each of these files 
-                                                is the APA site detection file, outputted by the first part of TAPAS (outputted by APS_detection).
+                                                is the APA site detection file, outputted by the first part of TAPAS (outputted by APA_sites_detection).
 
 	-a <annotation_file_name>		An annotation file is given using this option. This file is similar to the annotation file
 						of the APA site detection analysis.
