@@ -38,7 +38,7 @@ USAGE
 OPTIONS
 
 	-ref <annotation_file_name>	An annotation file is given using this option. 
-					e.g. Human annotation file is given in Finding_APA_sites directory for reference.
+					e.g. Human annotation file is given in Finding_APA_Sites directory for reference.
 
 	-cov <coverage_file_name>	A read coverage file is provided using this option.
 					Samtools is used to have the read coverage.
@@ -62,11 +62,11 @@ Note: The abundance of each detected APA site = read count of the APA site / len
 
 	
 ## Differential APA site analysis
-Diff_APA_Site_Analysis of TAPAS does differential analyses between two biological samples.
+Diff_APA_site_analysis of TAPAS does differential analyses between two biological samples.
 
 USAGE
 
-	./Diff_APA_Site_Analysis {OPTIONS}
+	./Diff_APA_site_analysis {OPTIONS}
 
 OPTIONS
 
@@ -91,7 +91,7 @@ OPTIONS
 
 EXAMPLE
 
-	./Diff_APA_Site_Analysis -C1 cond1_r1.txt,cond1_r2.txt,cond1_r3.txt,cond1_r4.txt,cond1_r5.txt,cond1_r6.txt -C2 cond2_r1.txt,cond2_r2.txt,cond2_r3.txt,cond2_r4.txt,cond2_r5.txt,cond2_r6.txt -a refFlat_sf.txt -cutoff 70 -type s -o deci_output.txt
+	./Diff_APA_site_analysis -C1 cond1_r1.txt,cond1_r2.txt,cond1_r3.txt,cond1_r4.txt,cond1_r5.txt,cond1_r6.txt -C2 cond2_r1.txt,cond2_r2.txt,cond2_r3.txt,cond2_r4.txt,cond2_r5.txt,cond2_r6.txt -a refFlat_sf.txt -cutoff 70 -type s -o deci_output.txt
 					
 
 ### Output of differential analysis
