@@ -62,11 +62,11 @@ Note: The abundance of each detected APA site = read count of the APA site / len
 
 	
 ## Differential APA site analysis
-Diff_APS_Analysis of TAPAS does differential analyses between two biological samples.
+Diff_APA_Site_Analysis of TAPAS does differential analyses between two biological samples.
 
 USAGE
 
-	./Diff_APS_Analysis {OPTIONS}
+	./Diff_APA_Site_Analysis {OPTIONS}
 
 OPTIONS
 
@@ -91,7 +91,7 @@ OPTIONS
 
 EXAMPLE
 
-	./Diff_APS_Analysis -C1 cond1_r1.txt,cond1_r2.txt,cond1_r3.txt,cond1_r4.txt,cond1_r5.txt,cond1_r6.txt -C2 cond2_r1.txt,cond2_r2.txt,cond2_r3.txt,cond2_r4.txt,cond2_r5.txt,cond2_r6.txt -a refFlat_sf.txt -cutoff 70 -type s -o deci_output.txt
+	./Diff_APA_Site_Analysis -C1 cond1_r1.txt,cond1_r2.txt,cond1_r3.txt,cond1_r4.txt,cond1_r5.txt,cond1_r6.txt -C2 cond2_r1.txt,cond2_r2.txt,cond2_r3.txt,cond2_r4.txt,cond2_r5.txt,cond2_r6.txt -a refFlat_sf.txt -cutoff 70 -type s -o deci_output.txt
 					
 
 ### Output of differential analysis
