@@ -38,7 +38,7 @@ USAGE
 OPTIONS
 
 	-ref <annotation_file_name>	An annotation file is given using this option. 
-					e.g. Human annotation file is given in Finding_APS directory for reference.
+					e.g. Human annotation file is given in Finding_APA_sites directory for reference.
 
 	-cov <coverage_file_name>	A read coverage file is provided using this option.
 					Samtools is used to have the read coverage.
