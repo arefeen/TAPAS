@@ -119,7 +119,7 @@ mainFunction <- function() {
   dataFile2 <- readingData(fileName2)
 
 
-  if ((ncol(dataFile1) > 6) & (ncol(dataFile2) > 6)) {
+  if ((ncol(dataFile1) >= 6) & (ncol(dataFile2) >= 6)) {
   	denominatorOfBothSample <- calculatingDenominator(dataFile1[, c(5:ncol(dataFile1))], dataFile2[, c(5:ncol(dataFile2))])
 	
 	sizeFactorList <- sizeFactorFunction(dataFile1[, c(5:ncol(dataFile1))], dataFile2[, c(5:ncol(dataFile2))], denominatorOfBothSample)	
