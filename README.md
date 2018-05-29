@@ -112,3 +112,6 @@ Command to calculate coverage from bam file:
 	samtools view -b sorted_accepted_hits.bam > accepted_reads.bam
 
 	samtools depth accepted_reads.bam > read_coverage.txt
+
+## Reference
+1. TAPAS: tool for alternative polyadenylation site analysis. *Bioinformatics*, 2018.
