@@ -5,9 +5,9 @@ Accoring to the central dogma of molecular biology, a pre-mRNA is synthesized fr
 ### Citation
 
 	@article{10.1093/bioinformatics/bty110,
-    		author = {Arefeen, Ashraful and Liu, Juntao and Xiao, Xinshu and Jiang, Tao},
-    		title = "{TAPAS: tool for alternative polyadenylation site analysis}",
-    		journal = {Bioinformatics},
+		author = {Arefeen, Ashraful and Liu, Juntao and Xiao, Xinshu and Jiang, Tao},
+		title = "{TAPAS: tool for alternative polyadenylation site analysis}",
+		journal = {Bioinformatics},
 		volume = {34},
 		number = {15},
 		pages = {2521-2529},
